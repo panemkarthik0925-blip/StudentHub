@@ -99,7 +99,7 @@ function App() {
     setLoginLoading(true);
 
     try {
-      const response = await fetch(`${API_BASE}/auth/login`, {
+      const response = await fetch(`${API_URL}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -153,8 +153,8 @@ function App() {
     try {
       const response = await fetch(
         isEditing
-          ? `${API_BASE}/students/${editingId}`
-          : `${API_BASE}/students`,
+          ? `${API_URL}/students/${editingId}`
+          : `${API_URL}/students`,
         {
           method: isEditing ? "PUT" : "POST",
           headers: {
@@ -230,7 +230,7 @@ function App() {
 
     try {
       const response = await fetch(
-        `${API_BASE}/students/${student._id}`,
+        `${API_URL}/students/${student._id}`,
         {
           method: "DELETE",
           headers: {
