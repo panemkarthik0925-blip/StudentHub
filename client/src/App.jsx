@@ -56,7 +56,7 @@ function App() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${API_BASE}/students`, {
+      const response = await fetch(`${API_URL}/students`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
